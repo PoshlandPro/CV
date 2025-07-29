@@ -1,47 +1,68 @@
-# John Doe
-**Software Engineer | Full Stack Developer**
+# Damian Garbus
+**Automation Engineer | Full Stack Developer**
 
-📧 john.doe@email.com | 📱 +1 (555) 123-4567  
-🌐 [LinkedIn](https://linkedin.com/in/johndoe) | [GitHub](https://github.com/johndoe) | [Portfolio](https://johndoe.dev)  
-📍 San Francisco, CA
+📧 kontakt@damiangarbus.pk | 📱 +48 503 750 572 
+🌐 [LinkedIn](https://www.linkedin.com/in/damiangarbus/) | [PoshlandPRO](https://poshland.pro) 
+📍 Warsaw, Poland
 
 ---
 
 ## Professional Summary
 
-Experienced Software Engineer with 5+ years of expertise in full-stack development, cloud technologies, and agile methodologies. Proven track record of delivering scalable solutions and leading cross-functional teams to achieve business objectives.
+Creative and responsible Microsoft technologies engineer with a strong focus on automation and scripting, particularly in PowerShell. Passionate about continuous learning and gaining hands-on experience in IT environments. Dedicated to delivering efficient, scalable solutions that support business processes.
 
 ---
 
 ## Technical Skills
 
-### Programming Languages
-- **Proficient:** JavaScript, TypeScript, Python, Java, C#
-- **Familiar:** Go, Rust, PHP
+<div class="skills-grid">
+  <div class="skill-category">
+    <h4>Programming Languages</h4>
+    <div class="skill-tags">
+      <span class="skill-tag">C#</span>
+      <span class="skill-tag">PowerShell</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">TypeScript</span>
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">Java</span>
+    </div>
+  </div>
 
-### Frontend Technologies
-- React, Vue.js, Angular
-- HTML5, CSS3, SASS/SCSS
-- Responsive Design, Progressive Web Apps
+  <div class="skill-category">
+    <h4>Microsoft Technologies</h4>
+    <div class="skill-tags">
+      <span class="skill-tag">.NET Core</span>
+      <span class="skill-tag">Azure</span>
+      <span class="skill-tag">Microsoft 365</span>
+      <span class="skill-tag">SharePoint</span>
+      <span class="skill-tag">Power Platform</span>
+    </div>
+  </div>
 
-### Backend Technologies
-- Node.js, Express.js, FastAPI
-- .NET Core, Spring Boot
-- RESTful APIs, GraphQL, microservices
+  <div class="skill-category">
+    <h4>Frontend Technologies</h4>
+    <div class="skill-tags">
+      <span class="skill-tag">React</span>
+      <span class="skill-tag">Vue.js</span>
+      <span class="skill-tag">Angular</span>
+      <span class="skill-tag">HTML5</span>
+      <span class="skill-tag">CSS3</span>
+      <span class="skill-tag">SASS</span>
+    </div>
+  </div>
 
-### Databases
-- **Relational:** PostgreSQL, MySQL, SQL Server
-- **NoSQL:** MongoDB, Redis, DynamoDB
-
-### Cloud & DevOps
-- AWS, Azure, Google Cloud Platform
-- Docker, Kubernetes, Jenkins
-- CI/CD, Infrastructure as Code (Terraform)
-
-### Tools & Methodologies
-- Git, GitHub, GitLab
-- Agile/Scrum, Test-Driven Development
-- Jest, Cypress, Selenium
+  <div class="skill-category">
+    <h4>Cloud & DevOps</h4>
+    <div class="skill-tags">
+      <span class="skill-tag">Azure DevOps</span>
+      <span class="skill-tag">Docker</span>
+      <span class="skill-tag">Kubernetes</span>
+      <span class="skill-tag">CI/CD</span>
+      <span class="skill-tag">Terraform</span>
+      <span class="skill-tag">Jenkins</span>
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -108,23 +129,23 @@ Experienced Software Engineer with 5+ years of expertise in full-stack developme
 
 ## Projects
 
+### PowerShell Automation Suite
+**Technologies:** PowerShell, Azure, Microsoft Graph API
+- Created comprehensive automation tools for Microsoft 365 administration
+- Developed custom modules for user provisioning and compliance reporting
+- [View Project](https://github.com/damiangarbus/automation-suite)
+
 ### E-Commerce Platform
 **Technologies:** React, Node.js, MongoDB, AWS
 - Built full-stack e-commerce platform with payment integration
 - Implemented real-time inventory management system
-- [View Project](https://github.com/johndoe/ecommerce-platform)
+- [View Project](https://github.com/damiangarbus/ecommerce-platform)
 
 ### Task Management API
 **Technologies:** Python, FastAPI, PostgreSQL, Docker
 - Developed RESTful API for task management with user authentication
 - Implemented comprehensive testing suite with 95% coverage
-- [View Project](https://github.com/johndoe/task-api)
-
-### Weather Dashboard
-**Technologies:** Vue.js, Chart.js, OpenWeather API
-- Created responsive weather dashboard with data visualization
-- Integrated geolocation and weather forecasting features
-- [View Project](https://github.com/johndoe/weather-dashboard)
+- [View Project](https://github.com/damiangarbus/task-api)
 
 ---
 

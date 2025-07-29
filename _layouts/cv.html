@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: "My Professional CV" }}</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: "Professional CV" }}</title>
     <meta name="description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}">
     
     <!-- SEO -->
@@ -15,55 +15,91 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
-    <link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}">
-    
-    <!-- Print styles -->
-    <style>
-        @media print {
-            .no-print { display: none !important; }
-            body { font-size: 12pt; line-height: 1.4; }
-            h1 { font-size: 18pt; }
-            h2 { font-size: 16pt; }
-            h3 { font-size: 14pt; }
-            .cv-container { max-width: none; margin: 0; padding: 0; }
-            a { color: #000; text-decoration: none; }
-            a[href]:after { content: " (" attr(href) ")"; font-size: 10pt; color: #666; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="cv-container">
-        <header class="cv-header no-print">
+        <!-- Header Section -->
+        <header class="cv-header">
             <div class="header-content">
-                <h1>{{ site.title | default: "Professional CV" }}</h1>
+                <div class="header-title">
+                    <h1>{{ site.title | default: "Professional CV" }}</h1>
+                    <div class="header-subtitle">Modern • Professional • Responsive</div>
+                </div>
                 <div class="header-actions">
-                    <button onclick="window.print()" class="print-btn">
-                        📄 Print / Save as PDF
+                    <button onclick="window.print()" class="btn print-btn">
+                        📄 Print / PDF
                     </button>
-                    <a href="{{ site.repository | default: 'https://github.com/PoshlandPro/CV' | prepend: 'https://github.com/' }}" class="github-link" target="_blank">
-                        📱 View on GitHub
+                    <a href="{{ site.repository | default: 'PoshlandPro/CV' | prepend: 'https://github.com/' }}" class="btn github-link" target="_blank">
+                        🔗 GitHub
                     </a>
                 </div>
             </div>
         </header>
         
-        <main class="cv-content">
-            {{ content }}
-        </main>
-        
-        <footer class="cv-footer no-print">
-            <div class="footer-content">
-                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author | default: "Your Name" }}. All rights reserved.</p>
-                <p>Built with ❤️ using <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
-            </div>
-        </footer>
+        <!-- Main Content Area -->
+        <div class="cv-main">
+            <!-- Primary Content -->
+            <main class="cv-content">
+                {{ content }}
+            </main>
+            
+            <!-- Sidebar -->
+            <aside class="cv-sidebar">
+                <!-- Contact Info -->
+                <div class="sidebar-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p>📧 kontakt@damiangarbus.pk</p>
+                        <p>📱 +48 503 750 572</p>
+                        <p>📍 Warsaw, Poland</p>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div class="sidebar-section">
+                    <h3>Online Presence</h3>
+                    <div class="contact-info">
+                        <p><a href="https://www.linkedin.com/in/damiangarbus/" target="_blank">LinkedIn Profile</a></p>
+                        <p><a href="https://poshland.pro" target="_blank">PoshlandPRO</a></p>
+                        <p><a href="https://github.com/PoshlandPro" target="_blank">GitHub</a></p>
+                    </div>
+                </div>
+                
+                <!-- Languages -->
+                <div class="sidebar-section">
+                    <h3>Languages</h3>
+                    <div class="language-item">
+                        <span>Polish</span>
+                        <span class="language-level">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span>English</span>
+                        <span class="language-level">Professional</span>
+                    </div>
+                    <div class="language-item">
+                        <span>German</span>
+                        <span class="language-level">Basic</span>
+                    </div>
+                </div>
+                
+                <!-- Key Skills -->
+                <div class="sidebar-section">
+                    <h3>Core Competencies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PowerShell</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">DevOps</span>
+                        <span class="skill-tag">Cloud</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
     </div>
 
-    <!-- JavaScript for enhanced functionality -->
+    <!-- Enhanced JavaScript -->
     <script>
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -79,46 +115,41 @@
             });
         });
 
-        // Add copy to clipboard functionality for email and phone
-        document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                if (e.ctrlKey || e.metaKey) {
-                    e.preventDefault();
-                    const text = this.textContent;
-                    navigator.clipboard.writeText(text).then(() => {
-                        // Show a temporary notification
-                        const notification = document.createElement('div');
-                        notification.textContent = 'Copied to clipboard!';
-                        notification.style.cssText = `
-                            position: fixed;
-                            top: 20px;
-                            right: 20px;
-                            background: #4CAF50;
-                            color: white;
-                            padding: 10px 20px;
-                            border-radius: 4px;
-                            z-index: 1000;
-                            font-size: 14px;
-                        `;
-                        document.body.appendChild(notification);
-                        setTimeout(() => notification.remove(), 2000);
-                    });
-                }
-            });
-        });
-
-        // Add print styles optimization
+        // Enhanced print functionality
         window.addEventListener('beforeprint', function() {
-            // Hide any elements that shouldn't be printed
-            document.querySelectorAll('.no-print').forEach(el => {
+            document.querySelectorAll('.btn').forEach(el => {
                 el.style.display = 'none';
             });
         });
 
         window.addEventListener('afterprint', function() {
-            // Restore hidden elements
-            document.querySelectorAll('.no-print').forEach(el => {
+            document.querySelectorAll('.btn').forEach(el => {
                 el.style.display = '';
+            });
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.cv-content > *').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
             });
         });
     </script>
