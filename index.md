@@ -1,8 +1,8 @@
-<!-- ---
+---
 layout: cv
-title: My Professional CV
+title: Damian Garbus
 description: Professional CV and Resume
 permalink: /
---- -->
+---
 
 {% include_relative cv.md %}
