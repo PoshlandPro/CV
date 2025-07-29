@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: site.github.repository_name }}</title>
-    <meta name="description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: "My Professional CV" }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | default: 'Professional CV and Resume' }}">
     
     <!-- SEO -->
     {% seo %}

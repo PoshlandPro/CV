@@ -1,7 +1,8 @@
 title: My Professional CV
 description: Professional CV and Resume - John Doe
-url: "" # Leave empty for GitHub Pages auto-detection
-baseurl: "" # Leave empty for GitHub Pages auto-detection
+url: "https://poshlandpro.github.io"
+baseurl: "/CV"
+repository: "PoshlandPro/CV"
 
 # Jekyll configuration
 markdown: kramdown
