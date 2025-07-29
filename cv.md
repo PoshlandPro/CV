@@ -1,7 +1,7 @@
 # Damian Garbus
 **Automation Engineer | Full Stack Developer**
 
-📧 kontakt@damiangarbus.pk | 📱 +48 503 750 572 
+📧 kontakt@damiangarbus.pl | 📱 +48 503 750 572 
 🌐 [LinkedIn](https://www.linkedin.com/in/damiangarbus/) | [PoshlandPRO](https://poshland.pro) 
 📍 Warsaw, Poland
 
