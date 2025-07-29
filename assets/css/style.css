@@ -1,0 +1,422 @@
+/* CSS Variables for easy customization */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #2c3e50;
+  --text-light: #7f8c8d;
+  --background: #ffffff;
+  --background-light: #f8f9fa;
+  --border-color: #e9ecef;
+  --shadow: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 8px rgba(0,0,0,0.15);
+  
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+  background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.cv-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  background: var(--background);
+}
+
+/* Header */
+.cv-header {
+  background: var(--background-light);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.header-content h1 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.print-btn, .github-link {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.print-btn:hover, .github-link:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Main content */
+.cv-content {
+  background: var(--background);
+  border-radius: 8px;
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
+h1 + p {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--secondary-color);
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--accent-color);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: var(--spacing-lg) 0 var(--spacing-sm) 0;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+}
+
+/* Contact information */
+h1 + p + p {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--background-light);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Links */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Lists */
+ul {
+  margin: var(--spacing-md) 0;
+  padding-left: var(--spacing-lg);
+}
+
+li {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+/* Professional experience sections */
+h3 + p {
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.95rem;
+}
+
+/* Skills section */
+h2 + h3 {
+  margin-top: var(--spacing-md);
+}
+
+/* Horizontal rules */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border-color), transparent);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Emphasis and strong text */
+strong {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+em {
+  font-style: italic;
+  color: var(--text-light);
+}
+
+/* Code and technical elements */
+code {
+  background: var(--background-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 3px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+}
+
+/* Tables (if used) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-md) 0;
+}
+
+th, td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  font-weight: 600;
+  color: var(--primary-color);
+  background: var(--background-light);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--secondary-color);
+  padding-left: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  font-style: italic;
+  color: var(--text-light);
+}
+
+/* Special sections styling */
+.experience-item {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  border-left: 3px solid var(--secondary-color);
+  background: var(--background-light);
+  border-radius: 0 6px 6px 0;
+}
+
+/* Footer */
+.cv-footer {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background: var(--background-light);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.footer-content p {
+  margin: var(--spacing-xs) 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .cv-container {
+    padding: var(--spacing-sm);
+  }
+  
+  .cv-content {
+    padding: var(--spacing-md);
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .print-btn, .github-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Print styles */
+@media print {
+  :root {
+    --shadow: none;
+    --shadow-hover: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: black;
+  }
+  
+  .cv-container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cv-header, .cv-footer {
+    display: none;
+  }
+  
+  .cv-content {
+    padding: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 18pt;
+    margin-bottom: 8pt;
+  }
+  
+  h2 {
+    font-size: 16pt;
+    margin: 16pt 0 8pt 0;
+    page-break-after: avoid;
+  }
+  
+  h3 {
+    font-size: 14pt;
+    margin: 12pt 0 6pt 0;
+    page-break-after: avoid;
+  }
+  
+  p, li {
+    orphans: 2;
+    widows: 2;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+  
+  .experience-item {
+    background: none;
+    border-left: 2pt solid #ccc;
+    padding-left: 12pt;
+    margin-bottom: 16pt;
+    page-break-inside: avoid;
+  }
+  
+  /* Ensure good page breaks */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  .experience-item, blockquote {
+    page-break-inside: avoid;
+  }
+}
+
+/* Dark mode support (if browser supports it) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #ecf0f1;
+    --text-color: #ecf0f1;
+    --text-light: #bdc3c7;
+    --background: #2c3e50;
+    --background-light: #34495e;
+    --border-color: #4a5f7a;
+  }
+  
+  body {
+    background-color: #1a252f;
+  }
+}
