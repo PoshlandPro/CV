@@ -9,10 +9,10 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-gem "jekyll", "~> 4.3.0"
+# gem "jekyll", "~> 4.3.0"
 
-# This is the default theme for new Jekyll sites.
-gem "minima", "~> 2.5"
+# We don't need a theme since we're using custom layouts
+# gem "minima", "~> 2.5"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.

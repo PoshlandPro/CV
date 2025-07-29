@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: site.github.repository_name }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}">
+    
+    <!-- SEO -->
+    {% seo %}
+    
+    <!-- Critical CSS - Load immediately -->
+    <style>
+        /* Critical styles for immediate rendering */
+        :root {
+          --primary-color: #1a202c;
+          --secondary-color: #4299e1;
+          --accent-color: #ed8936;
+          --text-color: #2d3748;
+          --text-light: #718096;
+          --background: #ffffff;
+          --background-light: #f7fafc;
+          --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+          --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          --spacing-md: 1rem;
+          --spacing-lg: 1.5rem;
+          --spacing-xl: 2rem;
+          --spacing-xxl: 3rem;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+          font-family: var(--font-family);
+          color: var(--text-color);
+          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+          min-height: 100vh;
+          line-height: 1.6;
+        }
+        
+        .cv-container {
+          max-width: 1000px;
+          margin: 0 auto;
+          padding: var(--spacing-lg);
+        }
+        
+        .cv-header {
+          background: var(--gradient-primary);
+          border-radius: 20px;
+          padding: var(--spacing-xl);
+          margin-bottom: var(--spacing-xl);
+          box-shadow: var(--shadow-large);
+          color: white;
+          text-align: center;
+        }
+        
+        .cv-content {
+          background: var(--background);
+          border-radius: 20px;
+          padding: var(--spacing-xxl);
+          box-shadow: var(--shadow-large);
+          position: relative;
+        }
+        
+        .cv-content::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+          border-radius: 20px 20px 0 0;
+        }
+        
+        h1 {
+          font-size: 3rem;
+          font-weight: 800;
+          background: var(--gradient-primary);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-align: center;
+          margin-bottom: var(--spacing-md);
+        }
+    </style>
+    
+    <!-- Load full stylesheet -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    {{ content }}
+</body>
+</html>

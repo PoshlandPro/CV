@@ -7,6 +7,7 @@ baseurl: "" # Leave empty for GitHub Pages auto-detection
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
+theme: null  # Disable default theme to use our custom layout
 
 # Plugins
 plugins:
